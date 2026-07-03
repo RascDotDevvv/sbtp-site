@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 140" role="img" aria-label="San Benito Tech Partners horizontal logo">
+  <title>San Benito Tech Partners — Horizontal Lockup</title>
+  <desc>Horizontal arrangement with mark to the left of the wordmark.</desc>
+  <circle cx="72" cy="48" r="14" fill="#C97A2C"></circle>
+  <line x1="20" y1="78" x2="124" y2="78" stroke="#1B3A57" stroke-width="1.4"></line>
+  <text x="170" y="68" font-family="Source Serif Pro, Georgia, serif" font-size="38" font-style="italic" fill="#1B3A57" letter-spacing="2">san benito</text>
+  <text x="170" y="98" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#3D4A5C" letter-spacing="9">TECH PARTNERS</text>
+</svg>

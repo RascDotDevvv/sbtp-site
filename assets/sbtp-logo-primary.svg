@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" role="img" aria-label="San Benito Tech Partners primary logo">
+  <title>San Benito Tech Partners — Primary Lockup</title>
+  <desc>Stacked logo with sun above horizon line, italic serif wordmark, and small-caps sans tagline.</desc>
+  <circle cx="200" cy="42" r="16" fill="#C97A2C"></circle>
+  <line x1="110" y1="76" x2="290" y2="76" stroke="#1B3A57" stroke-width="1.4"></line>
+  <text x="200" y="128" text-anchor="middle" font-family="Source Serif Pro, Georgia, serif" font-size="38" font-style="italic" fill="#1B3A57" letter-spacing="2.5">san benito</text>
+  <text x="200" y="160" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#3D4A5C" letter-spacing="10">TECH PARTNERS</text>
+</svg>
