@@ -1,0 +1,171 @@
+/* San Benito Tech Partners — site components
+   Built on brand.css. Direction: "The System" (editorial + navy panels). */
+
+/* ---------- layout ---------- */
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 56px; }
+.wrap-narrow { max-width: 920px; margin: 0 auto; padding: 0 56px; }
+section { position: relative; }
+.section { padding: 116px 0; }
+.section-sm { padding: 78px 0; }
+
+.bg-paper { background: var(--paper); }
+.bg-sand  { background: var(--sand); }
+.bg-navy  { background: var(--pacific); }
+.bg-white { background: #FCF8EF; }
+
+/* ---------- header ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 56px;
+  background: rgba(248,241,226,0.86);
+  backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid var(--sand-line);
+}
+.site-header.on-navy {
+  background: rgba(27,58,87,0.72);
+  border-bottom: 1px solid rgba(248,241,226,0.14);
+}
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand .wm { font-family: var(--display); font-style: italic; font-size: 20px; letter-spacing: .5px; line-height: 1; color: var(--pacific); }
+.brand .tg { font-family: var(--mono); font-size: 8.5px; letter-spacing: .34em; margin-top: 3px; color: var(--slate); }
+.on-navy .brand .wm { color: var(--paper); }
+.on-navy .brand .tg { color: rgba(248,241,226,.6); }
+
+.site-nav { display: flex; align-items: center; gap: 32px; }
+.site-nav a { font-family: var(--body); font-size: 14px; color: var(--slate); text-decoration: none; transition: color 140ms ease; }
+.site-nav a:hover { color: var(--pacific); }
+.site-nav a.active { color: var(--pacific); }
+.on-navy .site-nav a { color: rgba(248,241,226,.78); }
+.on-navy .site-nav a:hover, .on-navy .site-nav a.active { color: var(--paper); }
+.btn-sm { padding: 11px 20px !important; font-size: 14px !important; }
+
+/* ---------- eyebrow + section title ---------- */
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; }
+.eyebrow::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--amber); }
+.eyebrow span { font-family: var(--mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--slate); }
+.on-navy .eyebrow span { color: var(--sand); }
+
+.h2 { font-family: var(--display); font-style: italic; font-weight: 400; color: var(--pacific); font-size: clamp(30px, 3.4vw, 44px); line-height: 1.08; letter-spacing: -.01em; margin: 18px 0 0; text-wrap: balance; }
+.on-navy .h2 { color: var(--paper); }
+.h3 { font-family: var(--display); font-style: italic; font-weight: 400; color: var(--pacific); font-size: 25px; line-height: 1.15; margin: 0; }
+.body { font-family: var(--body); font-size: 17px; line-height: 1.65; color: var(--slate); text-wrap: pretty; }
+.body-lg { font-size: 19px; line-height: 1.62; }
+.on-navy .body, .on-navy .body-lg { color: var(--paper-on-navy); }
+
+/* ---------- hero (Direction C — split) ---------- */
+.hero { display: grid; grid-template-columns: 1.12fr 0.88fr; min-height: calc(100vh - 65px); }
+.hero-left { display: flex; flex-direction: column; justify-content: center; padding: 64px 56px 64px clamp(56px, 6vw, 104px); }
+.hero-h1 { font-family: var(--display); font-style: italic; font-weight: 400; color: var(--pacific); font-size: clamp(38px, 4.4vw, 58px); line-height: 1.05; letter-spacing: -.015em; margin: 26px 0 24px; text-wrap: balance; }
+.hero-left .body-lg { max-width: 500px; margin-bottom: 38px; }
+.hero-cta { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+
+.hero-panel { background: var(--pacific); padding: 56px clamp(40px, 4vw, 56px); display: flex; flex-direction: column; justify-content: center; }
+.panel-head { display: flex; align-items: center; gap: 11px; margin-bottom: 26px; }
+.panel-head .lbl { font-family: var(--mono); font-size: 11px; letter-spacing: .22em; color: var(--sand); }
+.panel-row { padding: 18px 0; border-top: 1px solid rgba(248,241,226,.14); }
+.panel-row:first-of-type { border-top: none; }
+.panel-row .k { font-family: var(--mono); font-size: 10.5px; letter-spacing: .18em; color: var(--amber); margin-bottom: 7px; }
+.panel-row .v { font-family: var(--body); font-size: 15px; color: var(--paper); line-height: 1.4; }
+
+/* ---------- horizon divider ---------- */
+.horizon { position: relative; height: 1px; background: var(--pacific); opacity: .18; }
+.horizon::after { content: ""; position: absolute; left: 50%; top: -6.5px; width: 13px; height: 13px; border-radius: 50%; background: var(--amber); transform: translateX(-50%); }
+.horizon.left::after { left: 0; transform: none; }
+
+/* ---------- practice grid ---------- */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+
+.practice { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--sand-line); }
+.practice .cell { padding: 38px 36px 38px 0; border-bottom: 1px solid var(--sand-line); }
+.practice .cell:nth-child(odd) { padding-right: 56px; }
+.practice .cell:nth-child(even) { padding-left: 56px; border-left: 1px solid var(--sand-line); }
+.practice .num { font-family: var(--mono); font-size: 12px; color: var(--amber); letter-spacing: .1em; }
+.practice .pt { font-family: var(--display); font-style: italic; font-size: 26px; color: var(--pacific); margin: 14px 0 12px; }
+.practice .pd { font-family: var(--body); font-size: 15.5px; line-height: 1.6; color: var(--slate); }
+
+/* ---------- vertical cards ---------- */
+.vcard { background: #FCF8EF; border: 1px solid var(--sand-line); padding: 36px 34px; display: flex; flex-direction: column; min-height: 300px; }
+.vcard .vh { font-family: var(--display); font-style: italic; font-size: 25px; color: var(--pacific); margin: 16px 0 14px; }
+.vcard .vd { font-family: var(--body); font-size: 15px; line-height: 1.6; color: var(--slate); flex: 1; }
+.vcard .vtag { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; color: var(--slate); text-transform: uppercase; }
+.vcard .quote { font-family: var(--display); font-style: italic; font-size: 16px; color: var(--pacific); line-height: 1.4; margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--sand-line); }
+
+/* ---------- case cards ---------- */
+.case { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 0; border: 1px solid var(--sand-line); background: #FCF8EF; }
+.case .meta { background: var(--pacific); padding: 44px 40px; display: flex; flex-direction: column; justify-content: space-between; }
+.case .meta .sector { font-family: var(--mono); font-size: 11px; letter-spacing: .18em; color: var(--sand); text-transform: uppercase; }
+.case .meta .who { font-family: var(--display); font-style: italic; font-size: 26px; color: var(--paper); line-height: 1.2; margin-top: 18px; }
+.case .meta .stat { margin-top: 28px; }
+.case .meta .stat .big { font-family: var(--display); font-style: italic; font-size: 46px; color: var(--amber); line-height: 1; }
+.case .meta .stat .cap { font-family: var(--body); font-size: 13px; color: var(--paper-on-navy); margin-top: 8px; }
+.case .body-side { padding: 44px 40px; }
+.case .body-side .lab { font-family: var(--mono); font-size: 10.5px; letter-spacing: .16em; color: var(--amber); text-transform: uppercase; margin-bottom: 9px; }
+.case .body-side .txt { font-family: var(--body); font-size: 15.5px; line-height: 1.62; color: var(--slate); margin: 0 0 26px; }
+.case .body-side .txt:last-child { margin-bottom: 0; }
+
+/* ---------- approach steps ---------- */
+.steps { border-top: 1px solid var(--sand-line); }
+.step { display: grid; grid-template-columns: 120px 1fr; gap: 40px; padding: 40px 0; border-bottom: 1px solid var(--sand-line); align-items: start; }
+.step .sn { font-family: var(--display); font-style: italic; font-size: 40px; color: var(--amber); line-height: 1; }
+.step .st { font-family: var(--display); font-style: italic; font-size: 24px; color: var(--pacific); margin: 0 0 12px; }
+.step .sd { font-family: var(--body); font-size: 16px; line-height: 1.62; color: var(--slate); max-width: 620px; }
+
+/* ---------- cta band ---------- */
+.cta-band { background: var(--pacific); }
+.cta-band .inner { padding: 96px 0; text-align: center; }
+.cta-band .ch { font-family: var(--display); font-style: italic; font-weight: 400; color: var(--paper); font-size: clamp(32px, 4vw, 50px); line-height: 1.08; margin: 22px 0 18px; text-wrap: balance; }
+.cta-band .cs { font-family: var(--body); font-size: 18px; color: var(--paper-on-navy); max-width: 560px; margin: 0 auto 36px; line-height: 1.6; }
+
+/* ---------- footer ---------- */
+.site-footer { background: var(--ink); color: var(--paper); padding: 72px 0 40px; }
+.foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; }
+.foot-col h4 { font-family: var(--mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: rgba(248,241,226,.5); margin: 0 0 18px; font-weight: 400; }
+.foot-col a { display: block; font-family: var(--body); font-size: 15px; color: rgba(248,241,226,.82); text-decoration: none; margin-bottom: 12px; transition: color 140ms ease; }
+.foot-col a:hover { color: var(--paper); }
+.foot-brand .wm { font-family: var(--display); font-style: italic; font-size: 22px; color: var(--paper); }
+.foot-brand .tg { font-family: var(--mono); font-size: 9px; letter-spacing: .34em; color: rgba(248,241,226,.55); margin-top: 4px; }
+.foot-brand p { font-family: var(--body); font-size: 14px; color: rgba(248,241,226,.6); line-height: 1.6; margin: 18px 0 0; max-width: 280px; }
+.foot-bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 56px; padding-top: 26px; border-top: 1px solid rgba(248,241,226,.12); }
+.foot-bottom span { font-family: var(--mono); font-size: 12px; color: rgba(248,241,226,.5); letter-spacing: .04em; }
+.foot-bottom a { color: var(--amber); text-decoration: none; }
+
+/* ---------- contact ---------- */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--sand-line); }
+.contact-left { padding: 56px clamp(40px,4vw,56px); }
+.contact-right { background: var(--pacific); padding: 56px clamp(40px,4vw,56px); display: flex; flex-direction: column; justify-content: center; }
+.contact-right .ci { margin-bottom: 26px; }
+.contact-right .ci:last-child { margin-bottom: 0; }
+.contact-right .ci .cl { font-family: var(--mono); font-size: 10.5px; letter-spacing: .18em; color: var(--amber); text-transform: uppercase; margin-bottom: 8px; }
+.contact-right .ci .cv { font-family: var(--body); font-size: 17px; color: var(--paper); }
+.contact-right .ci .cv a { color: var(--paper); text-decoration: none; border-bottom: 1px solid rgba(248,241,226,.3); }
+
+/* ---------- service list ---------- */
+.svc-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--sand-line); }
+.svc-list li { font-family: var(--body); font-size: 16px; color: var(--ink); padding: 16px 0 16px 26px; border-bottom: 1px solid var(--sand-line); position: relative; }
+.svc-list li::before { content: ""; position: absolute; left: 0; top: 23px; width: 7px; height: 7px; border-radius: 50%; background: var(--amber); }
+
+/* ---------- misc ---------- */
+.lead-page { padding: 88px 0 8px; }
+.lead-page .pt { font-family: var(--display); font-style: italic; color: var(--pacific); font-size: clamp(40px, 5vw, 62px); line-height: 1.06; letter-spacing: -.015em; margin: 24px 0 0; max-width: 15ch; text-wrap: balance; }
+.lead-page .ps { font-family: var(--body); font-size: 19px; line-height: 1.6; color: var(--slate); max-width: 560px; margin: 34px 0 0; }
+.measure { max-width: 640px; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 900px) {
+  .site-nav { gap: 18px; }
+  .site-nav a:not(.btn-amber) { display: none; }
+  .hero { grid-template-columns: 1fr; min-height: 0; }
+  .hero-panel { padding: 44px 40px; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .practice { grid-template-columns: 1fr; }
+  .practice .cell:nth-child(even) { padding-left: 0; border-left: none; }
+  .practice .cell:nth-child(odd) { padding-right: 0; }
+  .case { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .step { grid-template-columns: 1fr; gap: 10px; }
+  .wrap, .wrap-narrow, .site-header { padding-left: 28px; padding-right: 28px; }
+  .hero-left { padding: 48px 28px; }
+}

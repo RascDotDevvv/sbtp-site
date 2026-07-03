@@ -1,0 +1,114 @@
+/* San Benito Tech Partners — "Horizon" brand foundation
+   Source of truth: SBTP-Brand-Guidelines-v1. Restraint is the discipline. */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@1,8..60,400&display=swap');
+
+:root {
+  /* Palette — six colors total */
+  --ink:          #0A1A28;
+  --pacific:      #1B3A57;
+  --slate:        #3D4A5C;
+  --amber:        #C97A2C;
+  --sand:         #EFE4D0;
+  --paper:        #F8F1E2;
+  --white:        #FFFFFF;
+
+  /* Derived, on-brand tints (kept within the family, low chroma) */
+  --pacific-12:   rgba(27, 58, 87, 0.12);
+  --pacific-08:   rgba(27, 58, 87, 0.08);
+  --slate-50:     rgba(61, 74, 92, 0.50);
+  --sand-line:    #E4D6BD;
+  --paper-on-navy: rgba(248, 241, 226, 0.72);
+
+  /* Type */
+  --display: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+  --body:    'Inter', Helvetica, Arial, sans-serif;
+  --mono:    'JetBrains Mono', Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--body);
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- Display: Source Serif Pro Italic, sentence case, always italic ---- */
+.display {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--pacific);
+  letter-spacing: -0.01em;
+  line-height: 1.04;
+  text-wrap: balance;
+}
+
+/* ---- Mono kicker / labels ---- */
+.kicker {
+  font-family: var(--mono);
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+/* ---- Body ---- */
+.lede {
+  font-family: var(--body);
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--slate);
+  text-wrap: pretty;
+}
+
+p { text-wrap: pretty; }
+
+/* ---- The mark: amber sun + navy horizon line ---- */
+.sun { display: block; }
+
+/* ---- Amber CTA — the one accent per surface ---- */
+.btn-amber {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--paper);
+  background: var(--amber);
+  border: none;
+  padding: 15px 26px;
+  border-radius: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease;
+}
+.btn-amber:hover { background: #b86d24; }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--pacific);
+  background: transparent;
+  border: 1px solid var(--pacific-12);
+  padding: 14px 24px;
+  border-radius: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+.btn-ghost:hover { border-color: var(--pacific); }
+
+/* horizon rule */
+.rule { height: 1px; background: var(--pacific); opacity: 0.18; border: 0; }
