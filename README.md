@@ -36,3 +36,4 @@ Open `index.html` in a browser to view. All links are relative; keep the folder 
 roberto@sanbenito.tech · sanbenito.tech · English & Español
 
 <!-- redeploy 2026-07-04 -->
+<!-- redeploy 2026-07-05 -->
